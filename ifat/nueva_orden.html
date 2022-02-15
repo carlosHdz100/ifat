@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>IFAT</title>
+	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
@@ -18,9 +18,9 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
 	<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
-	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/dataTables.bootstrap4.min.css">
-	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/responsive.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="src/plugins/jquery-steps/jquery.steps.css">
 	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
+
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
@@ -37,6 +37,43 @@
 	<div class="header">
 		<div class="header-left">
 			<div class="menu-icon dw dw-menu"></div>
+			<div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
+			<div class="header-search">
+				<form>
+					<div class="form-group mb-0">
+						<i class="dw dw-search2 search-icon"></i>
+						<input type="text" class="form-control search-input" placeholder="Search Here">
+						<div class="dropdown">
+							<a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
+								<i class="ion-arrow-down-c"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right">
+								<div class="form-group row">
+									<label class="col-sm-12 col-md-2 col-form-label">From</label>
+									<div class="col-sm-12 col-md-10">
+										<input class="form-control form-control-sm form-control-line" type="text">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-sm-12 col-md-2 col-form-label">To</label>
+									<div class="col-sm-12 col-md-10">
+										<input class="form-control form-control-sm form-control-line" type="text">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-sm-12 col-md-2 col-form-label">Subject</label>
+									<div class="col-sm-12 col-md-10">
+										<input class="form-control form-control-sm form-control-line" type="text">
+									</div>
+								</div>
+								<div class="text-right">
+									<button class="btn btn-primary">Search</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
 		<div class="header-right">
 			<div class="dashboard-setting user-notification">
@@ -118,7 +155,9 @@
 					</div>
 				</div>
 			</div>
-
+			<div class="github-link">
+				<a href="https://github.com/dropways/deskapp" target="_blank"><img src="vendors/images/github.svg" alt=""></a>
+			</div>
 		</div>
 	</div>
 
@@ -201,7 +240,7 @@
 		<div class="brand-logo">
 			<a href="index.html">
 				<img src="vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
-				<img src="vendors/images/blue-logo.png" alt="" class="light-logo">
+				<img src="vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
 			</a>
 			<div class="close-sidebar" data-toggle="left-sidebar-close">
 				<i class="ion-close-round"></i>
@@ -211,7 +250,7 @@
 			<div class="sidebar-menu">
 				<ul id="accordion-menu">
 					<li class="dropdown">
-						<a href="index.html" class="dropdown-toggle">
+						<a href="javascript:;" class="dropdown-toggle">
 							<span class="micon dw dw-house-1"></span><span class="mtext">Inicio</span>
 						</a>
 					</li>
@@ -226,10 +265,10 @@
 						</a>
 					</li>	
 					<li class="dropdown">
-						<a href="orden_compras.html" class="dropdown-toggle">
+						<a href="javascript:;" class="dropdown-toggle">
 							<span class="micon dw dw-edit2"></span><span class="mtext">Orden de compras</span>
 						</a>
-						<ul class="submenu">
+						<!-- <ul class="submenu">
 							<li><a href="form-basic.html">Clientes</a></li>
 							<li><a href="advanced-components.html">Advanced Components</a></li>
 							<li><a href="form-wizard.html">Form Wizard</a></li>
@@ -237,7 +276,7 @@
 							<li><a href="form-pickers.html">Form Pickers</a></li>
 							<li><a href="image-cropper.html">Image Cropper</a></li>
 							<li><a href="image-dropzone.html">Image Dropzone</a></li>
-						</ul>
+						</ul> -->
 					</li>
 
 				</ul>
@@ -247,10 +286,201 @@
 	<div class="mobile-menu-overlay"></div>
 
 	<div class="main-container">
-		<div class="pd-ltr-20">
+		<div class="pd-ltr-20 xs-pd-20-10">
+			<div class="min-height-200px">
+				<!--<div class="page-header">
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="title">
+								<h4>Form Wizards</h4>
+							</div>
+							<nav aria-label="breadcrumb" role="navigation">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Form Wizards</li>
+								</ol>
+							</nav>
+						</div>
+						<div class="col-md-6 col-sm-12 text-right">
+							<div class="dropdown">
+								<a class="btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+									January 2018
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#">Export List</a>
+									<a class="dropdown-item" href="#">Policies</a>
+									<a class="dropdown-item" href="#">View Assets</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>-->
 
-	<!--luego ver que poner aqui-->
+				<div class="pd-20 card-box mb-30">
+					<div class="clearfix">
+						<h4 class="text-blue h4">Crear Orden</h4>
+					</div>
+					<div class="wizard-content">
+						<form class="tab-wizard wizard-circle wizard">
+							<h5>Título del reporte</h5>
+							<section>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label >Título:</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<!-- <div class="col-md-6">
+										<div class="form-group">
+											<label >Apellidos :</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Telefono :</label>
+											<input type="email" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Telefono :</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>RFC</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div> -->
+							</section>
+							<!-- Step 2 -->
+							<h5>Periodo a reportar</h5>
+							<section>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Desde</label>
+											<input type="text" class="form-control" placeholder="Fecha en día/mes/año">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Hasta</label>
+											<input type="text" class="form-control" placeholder="Fecha en día/mes/año">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Clasificación del proveedor</label>
+											<input type="text" class="form-control" placeholder="Nombre o Tipo...">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Producto</label>
+											<input type="text" class="form-control" placeholder="Seleccionar o escribir">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Línea del producto</label>
+											<input type="text" class="form-control" placeholder="Depende del producto">
+										</div>
+									</div>
+								</div>
+							</section>
+							<!-- Step 2 -->
+							<h5>Dirección</h5>
+							<section>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Dirección</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Colonia</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Codigo postal</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Codigo postal</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+							</section>
+							<!-- Step 2 -->
+							<h5>Dirección</h5>
+							<section>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Dirección</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Colonia</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Codigo postal</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Codigo postal</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+							</section>
+						</form>
+					</div>
+				</div>
 
+				<!-- success Popup html Start -->
+				<div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-body text-center font-18">
+								<h3 class="mb-20">Form Submitted!</h3>
+								<div class="mb-30 text-center"><img src="vendors/images/success.png"></div>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							</div>
+							<div class="modal-footer justify-content-center">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- success Popup html End -->
+			</div>
+			<div class="footer-wrap pd-20 mb-20 card-box">
+				DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
+			</div>
 		</div>
 	</div>
 	<!-- js -->
@@ -258,11 +488,7 @@
 	<script src="vendors/scripts/script.min.js"></script>
 	<script src="vendors/scripts/process.js"></script>
 	<script src="vendors/scripts/layout-settings.js"></script>
-	<script src="src/plugins/apexcharts/apexcharts.min.js"></script>
-	<script src="src/plugins/datatables/js/jquery.dataTables.min.js"></script>
-	<script src="src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
-	<script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
-	<script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
-	<script src="vendors/scripts/dashboard.js"></script>
+	<script src="src/plugins/jquery-steps/jquery.steps.js"></script>
+	<script src="vendors/scripts/steps-setting.js"></script>
 </body>
 </html>
