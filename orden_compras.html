@@ -3,7 +3,7 @@
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>IFAT</title>
+	<title>IFAT	</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
@@ -34,9 +34,11 @@
 </head>
 <body>
 
+
 	<div class="header">
 		<div class="header-left">
 			<div class="menu-icon dw dw-menu"></div>
+
 		</div>
 		<div class="header-right">
 			<div class="dashboard-setting user-notification">
@@ -118,7 +120,9 @@
 					</div>
 				</div>
 			</div>
-
+			<div class="github-link">
+				<a href="https://github.com/dropways/deskapp" target="_blank"><img src="vendors/images/github.svg" alt=""></a>
+			</div>
 		</div>
 	</div>
 
@@ -219,6 +223,7 @@
 						<a href="proveedores.html" class="dropdown-toggle">
 							<span class="micon dw dw-user1"></span><span class="mtext">Proveedores</span>
 						</a>
+
 					</li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle">
@@ -226,20 +231,10 @@
 						</a>
 					</li>	
 					<li class="dropdown">
-						<a href="orden_compras.html" class="dropdown-toggle">
+						<a href="#" class="dropdown-toggle">
 							<span class="micon dw dw-edit2"></span><span class="mtext">Orden de compras</span>
 						</a>
-						<ul class="submenu">
-							<li><a href="form-basic.html">Clientes</a></li>
-							<li><a href="advanced-components.html">Advanced Components</a></li>
-							<li><a href="form-wizard.html">Form Wizard</a></li>
-							<li><a href="html5-editor.html">HTML5 Editor</a></li>
-							<li><a href="form-pickers.html">Form Pickers</a></li>
-							<li><a href="image-cropper.html">Image Cropper</a></li>
-							<li><a href="image-dropzone.html">Image Dropzone</a></li>
-						</ul>
 					</li>
-
 				</ul>
 			</div>
 		</div>
@@ -247,9 +242,92 @@
 	<div class="mobile-menu-overlay"></div>
 
 	<div class="main-container">
-		<div class="pd-ltr-20">
+		<div class="pd-ltr-20 xs-pd-20-10">
+			<div class="min-height-200px">
 
-	<!--luego ver que poner aqui-->
+				<!-- Simple Datatable start -->
+				<div class="card-box mb-30">
+					<div class="pd-20" style="display: flex; justify-content: space-between;">
+						<h4 class="text-blue h4">Ordenes de Compras</h4>
+						<a href="nueva_orden.html" class="btn btn-success c-w" id="reset-settings">Nueva Orden</a>
+					</div>
+					<div class="pb-20">
+						<table class="data-table table stripe hover nowrap">
+							<thead>
+								<tr>
+									<th class="table-plus datatable-nosort">Título</th>
+									<th>Fecha de inicio</th>
+									<th>Proveedor</th>
+									<th>Fecha de termino</th>
+									<th>Estado</th>
+									<th class="datatable-nosort">Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="table-plus">Orden de compra 1</td>
+									<td>29-03-2022</td>
+									<td>Proveedor 1
+									</td>
+									<td>30-03-2022</td>
+									<td>En proceso</td>
+									<td>
+										<div class="dropdown">
+											<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+												<i class="dw dw-more"></i>
+											</a>
+											<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+												<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> Ver</a>
+												<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Editar</a>
+												<!-- <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a> -->
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="table-plus">Orden de compra 2</td>
+									<td>29-03-2022</td>
+									<td>Proveedor 2</td>
+									<td>30-03-2022</td>
+									<td>Aceptada</td>
+									<td>
+										<div class="dropdown">
+											<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+												<i class="dw dw-more"></i>
+											</a>
+											<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+												<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> Ver</a>
+												<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Editar</a>
+												<!-- <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a> -->
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class="table-plus">Orden de compra 3</td>
+									<td>29-03-2022</td>
+									<td>Proveedor 3</td>
+									<td>30-03-2022</td>
+									<td>Rechazada</td>
+									<td>
+										<div class="dropdown">
+											<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+												<i class="dw dw-more"></i>
+											</a>
+											<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+												<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> Ver</a>
+												<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Editar</a>
+												<!-- <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a> -->
+											</div>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<!-- Simple Datatable End -->
+			</div>
 
 		</div>
 	</div>
@@ -258,11 +336,18 @@
 	<script src="vendors/scripts/script.min.js"></script>
 	<script src="vendors/scripts/process.js"></script>
 	<script src="vendors/scripts/layout-settings.js"></script>
-	<script src="src/plugins/apexcharts/apexcharts.min.js"></script>
 	<script src="src/plugins/datatables/js/jquery.dataTables.min.js"></script>
 	<script src="src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
 	<script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
 	<script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
-	<script src="vendors/scripts/dashboard.js"></script>
-</body>
+	<!-- buttons for Export datatable -->
+	<script src="src/plugins/datatables/js/dataTables.buttons.min.js"></script>
+	<script src="src/plugins/datatables/js/buttons.bootstrap4.min.js"></script>
+	<script src="src/plugins/datatables/js/buttons.print.min.js"></script>
+	<script src="src/plugins/datatables/js/buttons.html5.min.js"></script>
+	<script src="src/plugins/datatables/js/buttons.flash.min.js"></script>
+	<script src="src/plugins/datatables/js/pdfmake.min.js"></script>
+	<script src="src/plugins/datatables/js/vfs_fonts.js"></script>
+	<!-- Datatable Setting js -->
+	<script src="vendors/scripts/datatable-setting.js"></script></body>
 </html>
