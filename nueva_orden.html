@@ -37,7 +37,7 @@
 	<div class="header">
 		<div class="header-left">
 			<div class="menu-icon dw dw-menu"></div>
-			<div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
+			<!-- <div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
 			<div class="header-search">
 				<form>
 					<div class="form-group mb-0">
@@ -73,7 +73,7 @@
 						</div>
 					</div>
 				</form>
-			</div>
+			</div> -->
 		</div>
 		<div class="header-right">
 			<div class="dashboard-setting user-notification">
@@ -240,7 +240,7 @@
 		<div class="brand-logo">
 			<a href="index.html">
 				<img src="vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
-				<img src="vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
+				<img src="vendors/images/blue-logo.png" alt="" class="light-logo">
 			</a>
 			<div class="close-sidebar" data-toggle="left-sidebar-close">
 				<i class="ion-close-round"></i>
@@ -265,7 +265,7 @@
 						</a>
 					</li>	
 					<li class="dropdown">
-						<a href="javascript:;" class="dropdown-toggle">
+						<a href="orden_compras.html" class="dropdown-toggle">
 							<span class="micon dw dw-edit2"></span><span class="mtext">Orden de compras</span>
 						</a>
 						<!-- <ul class="submenu">
@@ -318,146 +318,145 @@
 
 				<div class="pd-20 card-box mb-30">
 					<div class="clearfix">
-						<h4 class="text-blue h4">Crear Orden</h4>
+						<h4 class="text-blue h4">Nueva orden No. 12345</h4>
 					</div>
 					<div class="wizard-content">
 						<form class="tab-wizard wizard-circle wizard">
-							<h5>Título del reporte</h5>
 							<section>
 								<div class="row">
 									<div class="col-md-6">
 										<div class="form-group">
-											<label >Título:</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
-									<!-- <div class="col-md-6">
-										<div class="form-group">
-											<label >Apellidos :</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Telefono :</label>
-											<input type="email" class="form-control">
+											<label>Orden</label>
+											<select class="custom-select form-control">
+												<option value="Amsterdam">Directa</option>
+												<option value="Berlin">...</option>
+												<option value="Frankfurt">...</option>
+											</select>
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<label>Telefono :</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>RFC</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
-								</div> -->
-							</section>
-							<!-- Step 2 -->
-							<h5>Periodo a reportar</h5>
-							<section>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Desde</label>
-											<input type="text" class="form-control" placeholder="Fecha en día/mes/año">
+											<label>Número</label>
+											<input type="number" class="form-control" placeholder="0">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<label>Hasta</label>
-											<input type="text" class="form-control" placeholder="Fecha en día/mes/año">
+											<label>Fecha</label>
+											<input type="text" class="form-control date-picker" placeholder="Seleccionar fecha">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group" data-select2-id="7">
+											<label>Proveedor</label>
+											<input type="number" class="form-control" placeholder="0">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<label>Clasificación del proveedor</label>
-											<input type="text" class="form-control" placeholder="Nombre o Tipo...">
+											<label >Nombre:</label>
+											<select class="custom-select2 form-control select2-hidden-accessible" name="state" style="width: 100%; height: 38px;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+												<option value="AK" data-select2-id="3">Producto 1</option>
+												<option value="HI" data-select2-id="16">Producto 2</option>
+											</select>
+											<span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" data-select2-id="2" style="width: 100%;">
+												<span class="dropdown-wrapper" aria-hidden="true"></span>
+											</span>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group" data-select2-id="7">
+											<label>Esquema</label>
+											<input type="number" class="form-control" placeholder="0.00">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<label>Producto</label>
-											<input type="text" class="form-control" placeholder="Seleccionar o escribir">
+											<label >Dirección:</label>
+											<input type="text" class="form-control" disabled="false">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group" data-select2-id="7">
+											<label>Descuento</label>
+											<input type="number" class="form-control" placeholder="0.00">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<label>Línea del producto</label>
-											<input type="text" class="form-control" placeholder="Depende del producto">
+											<label >Población:</label>
+											<input type="text" class="form-control" disabled="false">
 										</div>
 									</div>
-								</div>
-							</section>
-							<!-- Step 2 -->
-							<h5>Dirección</h5>
-							<section>
-								<div class="row">
 									<div class="col-md-6">
-										<div class="form-group">
-											<label>Dirección</label>
-											<input type="text" class="form-control">
+										<div class="form-group" data-select2-id="7">
+											<label>Descuento final</label>
+											<input type="number" class="form-control" placeholder="0.00">
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
-											<label>Colonia</label>
-											<input type="text" class="form-control">
+											<label >Entregar a</label>
+											<textarea class="form-control"></textarea>
 										</div>
 									</div>
 									<div class="col-md-6">
-										<div class="form-group">
-											<label>Codigo postal</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Codigo postal</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
-								</div>
-							</section>
-							<!-- Step 2 -->
-							<h5>Dirección</h5>
-							<section>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Dirección</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Colonia</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Codigo postal</label>
-											<input type="text" class="form-control">
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label>Codigo postal</label>
-											<input type="text" class="form-control">
+										<div class="form-group" data-select2-id="7">
+											<label>Fecha Recibido</label>
+											<input type="number" class="form-control" placeholder="0.00">
 										</div>
 									</div>
 								</div>
 							</section>
 						</form>
+					</div>
+					<div class="pb-20">
+						<table class="data-table table stripe hover nowrap">
+							<thead>
+								<tr>
+									<th class="table-plus datatable-nosort">Cantidad</th>
+									<th>Producto</th>
+									<th>Unidad</th>
+									<th>Descuento</th>
+									<th>I. E. P. S</th>
+									<th>Estatal</th>
+									<th>I. V. B. S. S</th>
+									<th>I. V. A</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="table-plus">1</td>
+									<td>Producto 1</td>
+									<td>pz</td>
+									<td>10%</td>
+									<td>0.00</td>
+									<td>0.00</td>
+									<td>0.00</td>
+									<td>0.00</td>
+								</tr>
+								<tr>
+									<td class="table-plus">2</td>
+									<td>Producto 2</td>
+									<td>pz</td>
+									<td>5%</td>
+									<td>0.00</td>
+									<td>0.00</td>
+									<td>0.00</td>
+									<td>0.00</td>
+								</tr>
+								<tr>
+									<td class="table-plus">3</td>
+									<td>Producto 3</td>
+									<td>pz</td>
+									<td>15%</td>
+									<td>0.00</td>
+									<td>0.00</td>
+									<td>0.00</td>
+									<td>0.00</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 
@@ -478,9 +477,10 @@
 				</div>
 				<!-- success Popup html End -->
 			</div>
-			<div class="footer-wrap pd-20 mb-20 card-box">
+			
+			<!-- <div class="footer-wrap pd-20 mb-20 card-box">
 				DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<!-- js -->

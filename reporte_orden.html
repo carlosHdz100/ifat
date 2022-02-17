@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
 	<!-- Basic Page Info -->
 	<meta charset="utf-8">
-	<title>IFAT	</title>
+	<title>DeskApp - Bootstrap Admin Dashboard HTML Template</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
@@ -18,9 +18,9 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
 	<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
-	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/dataTables.bootstrap4.min.css">
-	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/responsive.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="src/plugins/jquery-steps/jquery.steps.css">
 	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
+
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
@@ -34,11 +34,46 @@
 </head>
 <body>
 
-
 	<div class="header">
 		<div class="header-left">
 			<div class="menu-icon dw dw-menu"></div>
-
+			<!-- <div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
+			<div class="header-search">
+				<form>
+					<div class="form-group mb-0">
+						<i class="dw dw-search2 search-icon"></i>
+						<input type="text" class="form-control search-input" placeholder="Search Here">
+						<div class="dropdown">
+							<a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
+								<i class="ion-arrow-down-c"></i>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right">
+								<div class="form-group row">
+									<label class="col-sm-12 col-md-2 col-form-label">From</label>
+									<div class="col-sm-12 col-md-10">
+										<input class="form-control form-control-sm form-control-line" type="text">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-sm-12 col-md-2 col-form-label">To</label>
+									<div class="col-sm-12 col-md-10">
+										<input class="form-control form-control-sm form-control-line" type="text">
+									</div>
+								</div>
+								<div class="form-group row">
+									<label class="col-sm-12 col-md-2 col-form-label">Subject</label>
+									<div class="col-sm-12 col-md-10">
+										<input class="form-control form-control-sm form-control-line" type="text">
+									</div>
+								</div>
+								<div class="text-right">
+									<button class="btn btn-primary">Search</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div> -->
 		</div>
 		<div class="header-right">
 			<div class="dashboard-setting user-notification">
@@ -215,7 +250,7 @@
 			<div class="sidebar-menu">
 				<ul id="accordion-menu">
 					<li class="dropdown">
-						<a href="index.html" class="dropdown-toggle">
+						<a href="javascript:;" class="dropdown-toggle">
 							<span class="micon dw dw-house-1"></span><span class="mtext">Inicio</span>
 						</a>
 					</li>
@@ -223,7 +258,6 @@
 						<a href="proveedores.html" class="dropdown-toggle">
 							<span class="micon dw dw-user1"></span><span class="mtext">Proveedores</span>
 						</a>
-
 					</li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle">
@@ -234,7 +268,17 @@
 						<a href="orden_compras.html" class="dropdown-toggle">
 							<span class="micon dw dw-edit2"></span><span class="mtext">Orden de compras</span>
 						</a>
+						<!-- <ul class="submenu">
+							<li><a href="form-basic.html">Clientes</a></li>
+							<li><a href="advanced-components.html">Advanced Components</a></li>
+							<li><a href="form-wizard.html">Form Wizard</a></li>
+							<li><a href="html5-editor.html">HTML5 Editor</a></li>
+							<li><a href="form-pickers.html">Form Pickers</a></li>
+							<li><a href="image-cropper.html">Image Cropper</a></li>
+							<li><a href="image-dropzone.html">Image Dropzone</a></li>
+						</ul> -->
 					</li>
+
 				</ul>
 			</div>
 		</div>
@@ -244,94 +288,197 @@
 	<div class="main-container">
 		<div class="pd-ltr-20 xs-pd-20-10">
 			<div class="min-height-200px">
+				<!--<div class="page-header">
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="title">
+								<h4>Form Wizards</h4>
+							</div>
+							<nav aria-label="breadcrumb" role="navigation">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Form Wizards</li>
+								</ol>
+							</nav>
+						</div>
+						<div class="col-md-6 col-sm-12 text-right">
+							<div class="dropdown">
+								<a class="btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+									January 2018
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#">Export List</a>
+									<a class="dropdown-item" href="#">Policies</a>
+									<a class="dropdown-item" href="#">View Assets</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>-->
 
-				<!-- Simple Datatable start -->
-				<div class="card-box mb-30">
-					<div class="pd-20" style="display: flex; justify-content: space-between;">
-						<h4 class="text-blue h4">Ordenes de Compras</h4>
+				<div class="pd-20 card-box mb-30">
+					<div class="clearfix">
+						<h4 class="text-blue h4">Reporte de compras por proveedor</h4>
 					</div>
-					<div class="pb-20" style="padding: 10px 10px; justify-content: flex-end;">
-						<a href="reporte_orden.html" class="btn btn-dark" id="reset-settings">Reporte por proveedor</a>
-						<a href="nueva_orden.html" class="btn btn-success" id="reset-settings">Nueva orden</a>
-					</div>
-					<div class="pb-20">
-						<table class="data-table table stripe hover nowrap">
-							<thead>
-								<tr>
-									<th class="table-plus datatable-nosort">Título</th>
-									<th>Fecha de inicio</th>
-									<th>Proveedor</th>
-									<th>Fecha de termino</th>
-									<th>Estado</th>
-									<th class="datatable-nosort">Acciones</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="table-plus">Orden de compra 1</td>
-									<td>29-03-2022</td>
-									<td>Proveedor 1
-									</td>
-									<td>30-03-2022</td>
-									<td>En proceso</td>
-									<td>
-										<div class="dropdown">
-											<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-												<i class="dw dw-more"></i>
-											</a>
-											<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-												<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> Ver</a>
-												<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Editar</a>
-												<!-- <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a> -->
+					<div class="wizard-content">
+						<form class="tab-wizard wizard-circle wizard">
+							<h5>Título del reporte</h5>
+							<section>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label >Título:</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+									<!-- <div class="col-md-6">
+										<div class="form-group">
+											<label >Apellidos :</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Telefono :</label>
+											<input type="email" class="form-control">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Telefono :</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>RFC</label>
+											<input type="text" class="form-control">
+										</div>
+									</div>
+								</div> -->
+							</section>
+							<!-- Step 2 -->
+							<h5>Periodo a reportar</h5>
+							<section>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Desde</label>
+											<input type="text" class="form-control date-picker" placeholder="Seleccionar fecha">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Hasta</label>
+											<input type="text" class="form-control date-picker" placeholder="Seleccionar fecha">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label>Clasificación del proveedor</label>
+											<select class="custom-select form-control">
+												<option value="Amsterdam">Clasificación 1</option>
+												<option value="Berlin">Clasificación 2</option>
+												<option value="Frankfurt">Clasificación 3</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group" data-select2-id="7">
+											<label>Producto</label>
+											<select class="custom-select2 form-control select2-hidden-accessible" name="state" style="width: 100%; height: 38px;" data-select2-id="1" tabindex="-1" aria-hidden="true">
+												<optgroup label="Clasificación 1" data-select2-id="15">
+													<option value="AK" data-select2-id="3">Producto 1</option>
+													<option value="HI" data-select2-id="16">Producto 2</option>
+												</optgroup>
+												<optgroup label="Clasificación 2" data-select2-id="17">
+													<option value="CA" data-select2-id="18">Producto 3</option>
+													<option value="NV" data-select2-id="19">Producto 4</option>
+												</optgroup>
+												<optgroup label="Clasificación 3" data-select2-id="22">
+													<option value="AZ" data-select2-id="23">Producto 5</option>
+													<option value="CO" data-select2-id="24">Producto 6</option>
+												</optgroup>
+											</select>
+											<span class="select2 select2-container select2-container--default select2-container--below select2-container--focus" dir="ltr" data-select2-id="2" style="width: 100%;">
+												<span class="dropdown-wrapper" aria-hidden="true"></span>
+											</span>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group">
+											<label>Línea del producto</label>
+											<input type="text" class="form-control" placeholder="Depende del producto">
+										</div>
+									</div>
+									<form class="form-group">
+										<div class="col-md-2">
+											<p>Devolución</p>
+											<input type="radio" id="html" name="fav_language" value="HTML">
+											<label for="html">Devoluciones</label><br>
+											</div>
+										<div class="col-md-4">
+											<p>Orden</p>
+											<div class="row">
+												<div class="col-md-4">
+													<input type="radio" id="age1" name="age" value="30">
+													<label for="age1">Ascendente</label>
+												</div>
+												<div class="col-md-4">
+													<input type="radio" id="age2" name="age" value="60">
+													<label for="age2">Descendente</label>
+												</div>
+												<div class="col-md-4">
+													<input type="radio" id="age3" name="age" value="100">
+													<label for="age3">Proveedor</label>
+												</div>
 											</div>
 										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="table-plus">Orden de compra 2</td>
-									<td>29-03-2022</td>
-									<td>Proveedor 2</td>
-									<td>30-03-2022</td>
-									<td>Aceptada</td>
-									<td>
-										<div class="dropdown">
-											<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-												<i class="dw dw-more"></i>
-											</a>
-											<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-												<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> Ver</a>
-												<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Editar</a>
-												<!-- <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a> -->
+										<div class="col-md-3">
+											<p>Proveedor a reportar</p>
+											<div class="row">
+												<div class="col-md-6">
+													<input type="radio" id="rd" name="rd" value="50">
+													<label for="rd">Todos</label><br>
+												</div>
+												<div class="col-md-6">
+													<label for="rd2">Cuántos</label><br>
+													<input type="number" class="form-control">
+												</div>
 											</div>
+											<br>
 										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="table-plus">Orden de compra 3</td>
-									<td>29-03-2022</td>
-									<td>Proveedor 3</td>
-									<td>30-03-2022</td>
-									<td>Rechazada</td>
-									<td>
-										<div class="dropdown">
-											<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-												<i class="dw dw-more"></i>
-											</a>
-											<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-												<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> Ver</a>
-												<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Editar</a>
-												<!-- <a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a> -->
-											</div>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+									</form>
+								</div>
+							</section>
+						</form>
 					</div>
 				</div>
-				<!-- Simple Datatable End -->
-			</div>
 
+				<!-- success Popup html Start -->
+				<div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-body text-center font-18">
+								<h3 class="mb-20">Form Submitted!</h3>
+								<div class="mb-30 text-center"><img src="vendors/images/success.png"></div>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							</div>
+							<div class="modal-footer justify-content-center">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- success Popup html End -->
+			</div>
+			<div class="footer-wrap pd-20 mb-20 card-box">
+				DeskApp - Bootstrap 4 Admin Template By <a href="https://github.com/dropways" target="_blank">Ankit Hingarajiya</a>
+			</div>
 		</div>
 	</div>
 	<!-- js -->
@@ -339,18 +486,7 @@
 	<script src="vendors/scripts/script.min.js"></script>
 	<script src="vendors/scripts/process.js"></script>
 	<script src="vendors/scripts/layout-settings.js"></script>
-	<script src="src/plugins/datatables/js/jquery.dataTables.min.js"></script>
-	<script src="src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
-	<script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
-	<script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
-	<!-- buttons for Export datatable -->
-	<script src="src/plugins/datatables/js/dataTables.buttons.min.js"></script>
-	<script src="src/plugins/datatables/js/buttons.bootstrap4.min.js"></script>
-	<script src="src/plugins/datatables/js/buttons.print.min.js"></script>
-	<script src="src/plugins/datatables/js/buttons.html5.min.js"></script>
-	<script src="src/plugins/datatables/js/buttons.flash.min.js"></script>
-	<script src="src/plugins/datatables/js/pdfmake.min.js"></script>
-	<script src="src/plugins/datatables/js/vfs_fonts.js"></script>
-	<!-- Datatable Setting js -->
-	<script src="vendors/scripts/datatable-setting.js"></script></body>
+	<script src="src/plugins/jquery-steps/jquery.steps.js"></script>
+	<script src="vendors/scripts/steps-setting.js"></script>
+</body>
 </html>
